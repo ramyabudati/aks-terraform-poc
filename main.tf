@@ -1,4 +1,4 @@
 resource "azurerm_resource_group" "rg" {
-  name     = "aks3tdev-rg"
+  name     = "akstdev-rg"
   location = "east us"
 }
