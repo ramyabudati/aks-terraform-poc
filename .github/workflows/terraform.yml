@@ -5,7 +5,7 @@ on:
     branches:
       - main  # Change this to the appropriate branch
 env:
-  ARM_ACCESS_KEY: "${{ secrets.ARM_ACCESS_KEY}}" ## storage account access key
+  ARM_ACCESS_KEY: "${{ secrets.ARM_ACCESS_KEY}}"
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -30,5 +30,6 @@ jobs:
       run: terraform init
     - name: plan Terraform
       run: terraform plan
+
     - name: Apply Terraform Changes
       run: terraform apply -auto-approve
